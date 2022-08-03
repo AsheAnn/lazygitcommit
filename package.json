@@ -4,9 +4,10 @@
   "description": "simple git commit tool for personal workflow",
   "main": "bin/index.js",
   "type": "module",
-  "scripts": {
+ "scripts": {
     "start": "node ."
   },
+  "keywords": ["cli", "git commit"],
   "author": "AsheAnn",
   "license": "MIT",
   "bin": {
