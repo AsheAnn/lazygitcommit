@@ -38,17 +38,7 @@ async function comment() {
 
 async function handleGitCommit() {
   var command = 'git commit -m ' + `"${prefix} ${note}"`
-  exec(command, (error, stdout, stderr) => {
-    if (error) {
-      console.log(`error: ${error.message}`)
-      return
-    }
-    if (stderr) {
-      console.log(`stderr: ${stderr}`)
-      return
-    }
-    console.log(`stdout: ${stdout}`)
-  })
+  exec(command)
 }
 
 await selectPrefix()
