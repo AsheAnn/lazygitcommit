@@ -45,15 +45,15 @@ async function handleGitCommit() {
   const child = spawn(command, args)
 
   child.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`)
+    console.log(chalk.cyanBright(`${data}`))
   })
 
   child.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`)
+    console.log(`${data}`)
   })
 
   child.on('close', (code) => {
-    console.log(`child process exited with code ${code}`)
+    console.log(`${code}`)
   })
 }
 
