@@ -1,0 +1,20 @@
+{
+  "name": "lazygitcommit",
+  "version": "1.0.0",
+  "description": "simple git commit tool for personal workflow",
+  "main": "bin/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "AsheAnn",
+  "license": "MIT",
+  "bin": {
+    "gz": "./bin/index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "inquirer": "^9.0.2",
+    "yargs": "13.2"
+  }
+}
