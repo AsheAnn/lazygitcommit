@@ -2,7 +2,7 @@
 
 import chalk from 'chalk'
 import inquirer from 'inquirer'
-import { exec } from 'child_process'
+import { spawn } from 'child_process'
 
 var prefix
 var note
@@ -16,13 +16,16 @@ async function selectPrefix() {
   })
 
   prefix = answers.prefix
-  prefix === '[FEATURE]'
-    ? console.log(chalk.blue(prefix))
-    : prefix === '[BUGFIX]'
-    ? console.log(chalk.magenta(prefix))
-    : prefix === '[SETUP]'
-    ? console.log(chalk.yellowBright(prefix))
-    : console.log(chalk.cyanBright(prefix))
+
+  if (prefix === '[FEATURE]') {
+    console.log(chalk.blue(prefix))
+  } else if (prefix === '[BUGFIX]') {
+    console.log(chalk.magenta(prefix))
+  } else if (prefix === '[SETUP]') {
+    console.log(chalk.yellowBright(prefix))
+  } else {
+    console.log(chalk.cyanBright(prefix))
+  }
 }
 
 async function comment() {
@@ -37,8 +40,21 @@ async function comment() {
 }
 
 async function handleGitCommit() {
-  var command = 'git commit -m ' + `"${prefix} ${note}"`
-  exec(command)
+  var command = 'git'
+  var args = ['commit', '-m', `"${prefix} ${note}"`]
+  const child = spawn(command, args)
+
+  child.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`)
+  })
+
+  child.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`)
+  })
+
+  child.on('close', (code) => {
+    console.log(`child process exited with code ${code}`)
+  })
 }
 
 await selectPrefix()
