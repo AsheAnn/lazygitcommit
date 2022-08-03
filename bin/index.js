@@ -51,10 +51,6 @@ async function handleGitCommit() {
   child.stdout.on('data', (data) => {
     console.log(chalk.whiteBright(`${data}`))
   })
-
-  child.on('close', (code) => {
-    console.log(`${code}`)
-  })
 }
 
 await selectPrefix()
