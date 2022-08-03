@@ -1,3 +1,8 @@
 # lazygitcommit
 
-custom git commit comments style
+Simple style to comment with git comment.
+
+
+### Install
+
+`npm i lazygitcommit` 

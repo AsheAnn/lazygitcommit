@@ -2,8 +2,12 @@
   "name": "lazygitcommit",
   "version": "1.0.2",
   "description": "simple style with git commit comments for personal workflow",
-  "main": "bin/index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AsheAnn/lazygitcommit"
+  },
+  "main": "bin/index.js",
   "scripts": {
     "start": "node ."
   },
