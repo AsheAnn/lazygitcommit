@@ -36,16 +36,16 @@ async function comment() {
     name: 'gitComment',
   })
 
+  title = message.gitComment
+  console.log(chalk.blue(title))
+
   const description = await inquirer.prompt({
     type: 'input',
-    messgae: 'Write your description: ',
+    message: 'Write your description: ',
     name: 'gitDescription',
   })
 
-  title = message.gitComment
   content = description.gitDescription
-
-  console.log(chalk.blue(title))
   console.log(chalk.yellow(content))
 }
 
