@@ -36,12 +36,12 @@ async function comment() {
   })
 
   note = message.gitComment
-  console.log(chalk.white(note))
+  console.log(chalk.cyan(note))
 }
 
 async function handleGitCommit() {
   var command = 'git'
-  var args = ['commit', '-m', `"${prefix} ${note}"`]
+  var args = ['commit', '-m', `${prefix} ${note}`]
   const child = spawn(command, args)
 
   child.stderr.on('data', (data) => {
