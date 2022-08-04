@@ -5,7 +5,8 @@ import inquirer from 'inquirer'
 import { spawn } from 'child_process'
 
 var prefix
-var note
+var title
+var content
 
 async function selectPrefix() {
   const answers = await inquirer.prompt({
@@ -35,13 +36,23 @@ async function comment() {
     name: 'gitComment',
   })
 
-  note = message.gitComment
-  console.log(chalk.blue(note))
+  const description = await inquirer.prompt({
+    type: 'input',
+    messgae: 'Write your description: ',
+    name: 'gitDescription',
+  })
+
+  title = message.gitComment
+  content = description.gitDescription
+
+  console.log(chalk.blue(title))
+  console.log(chalk.yellow(content))
 }
 
 async function handleGitCommit() {
   var command = 'git'
-  var args = ['commit', '-m', `${prefix} ${note}`]
+  var args = ['commit', '-m', `${prefix} ${title}`, '-m', `${content}`]
+
   const child = spawn(command, args)
 
   child.stderr.on('data', (data) => {
