@@ -36,7 +36,7 @@ async function comment() {
   })
 
   note = message.gitComment
-  console.log(chalk.cyan(note))
+  console.log(chalk.blue(note))
 }
 
 async function handleGitCommit() {
