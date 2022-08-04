@@ -1,6 +1,6 @@
 # lazygitcommit
 
-Simple style to comment with git comment.
+Simple style to comment with git commit.
 
 
 ### Install
