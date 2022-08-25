@@ -14,5 +14,7 @@ Simple style to comment with git commit.
 
 - [FEATURE] : Add new feature.
 - [BUGFIX] : Fix bug or error.
-- [SETUP] : Install module, change dependencies or configure. 
-- [STYLE] : Markup, code formatting, edit documentations.
+- [SETUP] : Deal with file structures, packages, modules and change dependencies or configure. 
+- [STYLE] : Markup, code formatting.
+- [REFACTOR] : Refactoring. 
+- [DOCS] : Edit documentations, Note-taking.
