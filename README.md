@@ -10,11 +10,11 @@ Simple style to comment with git commit.
 `yarn global add lazygitcommit`
 
 
-### Config
+### Configure
 
-- [FEATURE] : Add new feature.
-- [BUGFIX] : Fix bug or error.
-- [SETUP] : Deal with file structures, packages, modules and change dependencies or configure. 
-- [STYLE] : Markup, code formatting.
-- [REFACTOR] : Refactoring. 
-- [DOCS] : Edit documentations, Note-taking.
+- [FEATURE]: Add new feature.
+- [BUGFIX]: Fix bug or error.
+- [BUILD]: Deal with file structures, packages, modules and change dependencies or configure. 
+- [STYLE]: Markup, code formatting.
+- [REFACTOR]: Refactoring. 
+- [DOCS]: Edit documentations.

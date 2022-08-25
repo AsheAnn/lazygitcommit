@@ -13,7 +13,14 @@ async function selectPrefix() {
     type: 'list',
     message: 'Select git comment prefix: ',
     name: 'prefix',
-    choices: ['[FEATURE]', '[BUGFIX]', '[SETUP]', '[STYLE]', '[REFACTOR]'],
+    choices: [
+      '[FEATURE]',
+      '[BUGFIX]',
+      '[BUILD]',
+      '[STYLE]',
+      '[REFACTOR]',
+      '[DOCS]',
+    ],
   })
 
   prefix = answers.prefix
@@ -22,10 +29,12 @@ async function selectPrefix() {
     console.log(chalk.blue(prefix))
   } else if (prefix === '[BUGFIX]') {
     console.log(chalk.magenta(prefix))
-  } else if (prefix === '[SETUP]') {
+  } else if (prefix === '[BUILD]') {
     console.log(chalk.yellowBright(prefix))
   } else if (prefix === '[REFACTOR]') {
     console.log(chalk.redBright(prefix))
+  } else if (prefix === '[DOCS]') {
+    console.log(chalk.greenBright(prefix))
   } else {
     console.log(chalk.cyanBright(prefix))
   }
