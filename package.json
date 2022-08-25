@@ -1,6 +1,6 @@
 {
   "name": "lazygitcommit",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "simple style with git commit comments for personal workflow",
   "type": "module",
   "repository": {
