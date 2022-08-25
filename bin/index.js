@@ -34,7 +34,7 @@ async function selectPrefix() {
   } else if (prefix === '[REFACTOR]') {
     console.log(chalk.redBright(prefix))
   } else if (prefix === '[DOCS]') {
-    console.log(chalk.greenBright(prefix))
+    console.log(chalk.green(prefix))
   } else {
     console.log(chalk.cyanBright(prefix))
   }
