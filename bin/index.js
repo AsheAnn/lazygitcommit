@@ -20,6 +20,7 @@ async function selectPrefix() {
       '[STYLE]',
       '[REFACTOR]',
       '[DOCS]',
+      '[CODEREVIEW]'
     ],
   })
 
