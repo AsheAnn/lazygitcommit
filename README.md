@@ -16,5 +16,5 @@ Simple style to comment with git commit.
 - [BUGFIX]: Fix bug or error.
 - [BUILD]: Deal with file structures, packages, modules and change dependencies or configure. 
 - [STYLE]: Markup, code formatting.
-- [REFACTOR]: Refactoring. 
+- [REFACTOR]: code refactoring. 
 - [DOCS]: Edit documentations.
